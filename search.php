@@ -3,7 +3,7 @@
 <?php   require("config.php"); ?>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="search.css">
+	<link rel="stylesheet" type="text/css" href="css/search.css">
 	<title></title>
 </head>
 <body>
