@@ -20,6 +20,10 @@
 					<i class="fas fa-user"></i>
 				</label>
 				<input type="text" name="surname" placeholder="Nom" id="username" required>
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
 				<label for="email">
 					<i class="fas fa-at"></i>
                 </label>
@@ -27,12 +31,12 @@
 				<label for="password">
 					<i class="fas fa-lock"></i>
                 </label>
-                <input type="text" name="password" placeholder="Mot de passe" id="username" required>
+				<input type="password" name="password" placeholder="Mot de passe" id="password" required>
 				<label for="password">
 					<i class="fas fa-lock"></i>
 				</label>
 				<input type="password" name="vpassword" placeholder="Répétrer votre mot de passe" id="password" required>
-				<input type="submit" value="Login">
+				<input type="submit" name="reg_user" value="Register">
 			</form>
 		</div>
 	</body>
