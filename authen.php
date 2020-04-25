@@ -1,9 +1,5 @@
 <?php
 require('config.php');
-session_start();
-if ( !isset($_POST['username'], $_POST['password']) ) {
-	exit('Please fill both the username and password fields!');
-}
 if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
 	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
@@ -20,7 +16,6 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             header('Location: home.php');
         } else {
             echo 'Incorrect password!';
-            
         }
     } else {
         echo 'Incorrect username!';
