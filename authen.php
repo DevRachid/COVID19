@@ -20,7 +20,7 @@ if (isset($_POST['reg_user'])) {
       array_push($errors, "The two passwords do not match");
     }
   
-    $user_check_query = "SELECT * FROM 'accounts' WHERE username='$username' OR email='$email' LIMIT 1";
+    $user_check_query = "SELECT * FROM accounts WHERE username='$username' OR email='$email' LIMIT 1";
     $result = mysqli_query($con, $user_check_query);
     $user = mysqli_fetch_assoc($result);
     
@@ -42,12 +42,10 @@ if (isset($_POST['reg_user'])) {
         mysqli_query($con, $query);
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "You are now logged in";
-        header('location: login.php');
+       // header('location: login.php');
     }
   }
   
-  
-  // ... 
 ?>
 <?php  if (count($errors) > 0) : ?>
   <div class="error">
